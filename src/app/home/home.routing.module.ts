@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthGuard } from '../core/auth/auth.guard';
 import { HomeComponent } from './home.component';
+import { AuthGuard } from '../core/auth/auth.guard';
 import { SignInComponent } from './signin/signin.component';
 import { SignUpComponent } from './singup/singup.component';
 
@@ -19,9 +19,9 @@ const routes: Routes = [
             { 
                 path: 'signup',
                 component: SignUpComponent,
-            },  
+            },            
         ]
-    },        
+    },              
 ];
 
 @NgModule({
@@ -31,3 +31,4 @@ const routes: Routes = [
     exports: [ RouterModule ]
 })
 export class HomeRoutingModule { }
+
