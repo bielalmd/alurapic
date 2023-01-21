@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { NewUser } from './new-user';
 import { provideForRootGuard } from '@angular/router/src/router_module';
 
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
-const API = environment.apiUrl;
+const API = environment.ApiUrl;
 
 @Injectable()
 export class SignUpService {

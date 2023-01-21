@@ -1,10 +1,12 @@
-import { Component, Input } from '@angular/core';
-import { Alert, AlertType } from './alert';
-import { AlertService } from './alert.service';
+import { Component } from "@angular/core";
+import { Input } from "@angular/core";
+import { AlertService } from "./alert.service";
+import { Alert, AlertType } from "./alert";
+
 
 @Component({
     selector: 'ap-alert',
-    templateUrl: './alert.component.html',
+    templateUrl: './alert.component.html'
 })
 export class AlertComponent {
 
@@ -33,7 +35,7 @@ export class AlertComponent {
 
         if(!alert) return '';
 
-        switch(alert.alertType) {
+        switch (alert.alertType) {
 
             case AlertType.DANGER:
                 return 'alert alert-danger';

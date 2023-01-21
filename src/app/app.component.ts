@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { pipe } from '@angular/core/src/render3/pipe';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map, switchMap } from 'rxjs/operators';
 
 @Component({
@@ -9,7 +8,7 @@ import { filter, map, switchMap } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit { 
 
   constructor(
     private router: Router,
@@ -28,5 +27,4 @@ export class AppComponent implements OnInit {
       .pipe(switchMap(route => route.data))
       .subscribe(event => this.titleService.setTitle(event.title));
   }
-
 }
